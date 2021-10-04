@@ -1,0 +1,25 @@
+img {
+  display: none;
+}
+
+svg,
+img {
+  max-width: 80%;
+  max-height: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+svg path,
+img path {
+  stroke: black;
+  stroke-width: 3;
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
