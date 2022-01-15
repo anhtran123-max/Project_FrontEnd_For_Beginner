@@ -1,0 +1,337 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.page {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.page__side-bar {
+  width: 118px;
+  padding: 14px;
+  height: 100%;
+}
+.page__side-bar .side-bar {
+  background-color: #7a40f2;
+  border-radius: 20px;
+  height: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.page__side-bar .side-bar__item {
+  height: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.page__side-bar .side-bar__item--active .side-bar__icon path {
+  fill: #7a40f2;
+}
+.page__side-bar .side-bar__item:last-child {
+  margin-top: auto;
+}
+.page__side-bar .side-bar__icon {
+  z-index: 2;
+}
+.page__side-bar .side-bar__icon path {
+  fill: whie;
+}
+.page__side-bar .side-bar__indicator {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  transition: transform 300ms;
+}
+.page__side-bar .side-bar__indicator path {
+  fill: white;
+}
+.page__main .header {
+  height: 51px;
+  margin: 35px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.page__main .header__search {
+  height: 100%;
+  position: relative;
+}
+.page__main .header__search img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 23px;
+}
+.page__main .header__search input {
+  background-color: #edeef4;
+  border: none;
+  border-radius: 15px;
+  padding: 0px 52px;
+  height: 100%;
+}
+.page__main .header__nav {
+  display: flex;
+  align-items: center;
+}
+.page__main .header__button {
+  margin-right: 35px;
+}
+.page__main .header__user {
+  color: black;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.page__main .header__user span {
+  margin: 0px 10px;
+}
+.page__main .header__user:hover {
+  color: black;
+}
+.page__main .main .banner {
+  background-color: #ffecc8;
+  border-radius: 28px;
+  padding: 27px 25px;
+  position: relative;
+  overflow: hidden;
+}
+.page__main .main .banner__background {
+  background: url("/images/banner.png") no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 50%;
+}
+.page__main .main .banner__title {
+  font-size: 30px;
+}
+.page__main .main .banner__description {
+  font-size: 14px;
+  width: 359px;
+}
+.page__main .main .banner__title, .page__main .main .banner__description {
+  color: #c45a01;
+}
+.page__main .main .banner p {
+  display: flex;
+  align-items: center;
+}
+.page__main .main .banner p:last-child {
+  margin-bottom: 0;
+}
+.page__main .main .banner span {
+  font-size: 24px;
+  margin-right: 5px;
+}
+.page__main .main .home-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+  height: 136px;
+}
+.page__main .main .living-room-temperature {
+  border: 1px solid #e6e5f2;
+  border-radius: 28px;
+  padding: 20px 30px;
+}
+.page__main .main .living-room-temperature .temperature-control {
+  display: grid;
+  grid-template-columns: 155px 1fr 155px;
+  align-items: center;
+  justify-content: center;
+}
+.page__main .main .living-room-temperature .temperature-control__button {
+  display: flex;
+  justify-content: center;
+}
+.page__main .main .living-room-temperature .temperature-control__button button {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background-color: whitesmoke;
+  border: none;
+}
+.page__main .main .living-room-temperature .temperature-control__button--purple button {
+  color: white;
+  background-color: #7a40f2;
+}
+.page__main .main .living-room-temperature .temperature-control__control {
+  text-align: center;
+}
+.page__main .main .main__right {
+  background-color: whitesmoke;
+  border-radius: 30px 0px 0px 0px;
+  padding: 28px 30px;
+}
+.page__main .main .main__right .section-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.page__main .main .main__right .section-title button {
+  border-radius: 10px;
+  background-color: #edeef4;
+  border: none;
+  height: 100%;
+  width: 36px;
+}
+.page__main .main .main__right .my-device-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 17px 17px;
+  height: 237px;
+}
+.page__main .main .main__right .members-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 22px;
+  border: 1px solid rgba(230, 229, 242, 0.81);
+  border-radius: 28px;
+  background-color: white;
+}
+.page__main .main .main__right .members-box__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page__main .main .main__right .members-box__subtitle {
+  font-size: 11px;
+  color: #9897ad;
+}
+.page__main .main .main__right .chart-box {
+  border-radius: 28px;
+  padding: 20px 19px;
+  background-color: white;
+}
+.page__main .main .main__right .chart-box__chart {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". chart chart chart chart chart chart chart chart" ". chart chart chart chart chart chart chart chart" ". chart chart chart chart chart chart chart chart" ". chart chart chart chart chart chart chart chart" ". . . . . . . . .";
+}
+.page__main .main .main__right .chart-box__content {
+  grid-area: chart;
+}
+.page__main .main .main__right .chart-box__content svg {
+  width: 100%;
+}
+.page .avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.page select {
+  background-color: #edeef4;
+  padding: 9px 14px;
+  border-radius: 11px;
+  border: none;
+}
+.page .xcard {
+  border-radius: 25px;
+  padding: 20px;
+  border: 1px solid rgba(230, 229, 242, 0.81);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.page .xcard path {
+  fill: #979797;
+}
+.page .xcard--purple.xcard--active {
+  background-color: #7a40f2;
+  color: white;
+}
+.page .xcard--purple.xcard--active path {
+  fill: white;
+}
+.page .xcard--yellow.xcard--active {
+  background-color: #f4c427;
+  color: white;
+}
+.page .xcard--yellow.xcard--active .switch-button__indicator {
+  background-color: #f4c427 !important;
+}
+.page .xcard--yellow.xcard--active path {
+  fill: white;
+}
+.page .xcard--organge.xcard--active {
+  background-color: #ff9060;
+  color: white;
+}
+.page .xcard--organge.xcard--active .switch-button__indicator {
+  background-color: #ff9060 !important;
+}
+.page .xcard--organge.xcard--active path {
+  fill: white;
+}
+.page .xcard--blue.xcard--active {
+  background-color: #3acbe9;
+  color: white;
+}
+.page .xcard--blue.xcard--active .switch-button__indicator {
+  background-color: #3acbe9 !important;
+}
+.page .xcard--blue.xcard--active path {
+  fill: white;
+}
+.page .switch-button {
+  display: inline-block;
+}
+.page .switch-button__label {
+  float: left;
+  margin-bottom: 0;
+  margin-right: 10px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.page .switch-button__background {
+  float: right;
+  width: 28px;
+  background-color: #d6d6d6;
+  border-radius: 8px;
+  padding: 1px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.page .switch-button__indicator {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+}
+.page .switch-button input[value=true] ~ .switch-button__background {
+  background-color: white;
+}
+.page .switch-button input[value=true] ~ .switch-button__background > .switch-button__indicator {
+  background-color: #6f5cea;
+  margin-left: calc(100% - 15px);
+}
+.page .mr-20 {
+  margin-right: 20px;
+}
+.page .mb-15 {
+  margin-bottom: 15px;
+}
+.page .mb-25 {
+  margin-bottom: 25px;
+}
+.page .mb-37 {
+  margin-bottom: 37px;
+}
+.page .mr-30 {
+  margin-right: 30px;
+}
+

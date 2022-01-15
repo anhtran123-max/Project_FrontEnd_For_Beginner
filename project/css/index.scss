@@ -1,0 +1,400 @@
+2 body {
+  font-family: "Roboto", sans-serif;
+}
+.page {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  &__side-bar {
+    width: 118px;
+    padding: 14px;
+    height: 100%;
+
+    .side-bar {
+      background-color: rgba(122, 64, 242, 1);
+      border-radius: 20px;
+      height: 100%;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+
+      &__item {
+        height: 95px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &--active {
+          .side-bar__icon {
+            path {
+              fill: rgba(122, 64, 242, 1);
+            }
+          }
+        }
+
+        &:last-child {
+          margin-top: auto;
+        }
+      }
+
+      &__icon {
+        z-index: 2;
+        path {
+          fill: whie;
+        }
+      }
+      &__indicator {
+        position: absolute;
+        right: 0;
+        width: 100%;
+        transition: transform 300ms;
+
+        path {
+          fill: white;
+        }
+      }
+    }
+  }
+
+  &__main {
+    .header {
+      height: 51px;
+      margin: 35px 40px;
+      display: flex;
+      justify-content: space-between;
+
+      &__search {
+        height: 100%;
+        position: relative;
+        img {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 23px;
+        }
+        input {
+          background-color: rgba(237, 238, 244, 1);
+          border: none;
+          border-radius: 15px;
+          padding: 0px 52px;
+          height: 100%;
+        }
+      }
+
+      &__nav {
+        display: flex;
+        align-items: center;
+      }
+      &__button {
+        margin-right: 35px;
+      }
+      &__user {
+        color: black;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        span {
+          margin: 0px 10px;
+        }
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+    .main {
+      .banner {
+        background-color: rgba(255, 236, 200, 1);
+        border-radius: 28px;
+        padding: 27px 25px;
+        position: relative;
+        overflow: hidden;
+
+        &__background {
+          background: url("/images/banner.png") no-repeat;
+          background-size: cover;
+          position: absolute;
+          right: 0;
+          height: 100%;
+          width: 50%;
+        }
+
+        &__title {
+          font-size: 30px;
+        }
+        &__description {
+          font-size: 14px;
+          width: 359px;
+        }
+        &__title,
+        &__description {
+          color: rgba(196, 90, 1, 1);
+        }
+
+        p {
+          display: flex;
+          align-items: center;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        span {
+          font-size: 24px;
+          margin-right: 5px;
+        }
+      }
+
+      .home-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 30px;
+        height: 136px;
+      }
+
+      .living-room-temperature {
+        border: 1px solid rgba(230, 229, 242, 1);
+        border-radius: 28px;
+        padding: 20px 30px;
+
+        .temperature-control {
+          display: grid;
+          grid-template-columns: 155px 1fr 155px;
+          align-items: center;
+          justify-content: center;
+
+          &__button {
+            display: flex;
+            justify-content: center;
+            button {
+              width: 54px;
+              height: 54px;
+              border-radius: 12px;
+              background-color: rgba(245, 245, 245, 1);
+              border: none;
+            }
+
+            &--purple {
+              button {
+                color: white;
+                background-color: rgba(122, 64, 242, 1);
+              }
+            }
+          }
+          &__control {
+            text-align: center;
+          }
+        }
+      }
+
+      .main__right {
+        background-color: rgba(245, 245, 245, 1);
+        border-radius: 30px 0px 0px 0px;
+        padding: 28px 30px;
+
+        .section-title {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 18px;
+
+          button {
+            border-radius: 10px;
+            background-color: rgba(237, 238, 244, 1);
+            border: none;
+            height: 100%;
+            width: 36px;
+          }
+        }
+
+        .my-device-cards {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          grid-gap: 17px 17px;
+          height: 237px;
+        }
+
+        .members-box {
+          display: flex;
+          justify-content: space-between;
+          padding: 18px 22px;
+          border: 1px solid rgba(230, 229, 242, 0.81);
+          border-radius: 28px;
+          background-color: white;
+
+          &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+
+          &__subtitle {
+            font-size: 11px;
+            color: rgba(152, 151, 173, 1);
+          }
+        }
+
+        .chart-box {
+          border-radius: 28px;
+          padding: 20px 19px;
+          background-color: white;
+
+          &__chart {
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            gap: 0px 0px;
+            grid-template-areas:
+              ". chart chart chart chart chart chart chart chart"
+              ". chart chart chart chart chart chart chart chart"
+              ". chart chart chart chart chart chart chart chart"
+              ". chart chart chart chart chart chart chart chart"
+              ". . . . . . . . .";
+          }
+
+          &__content {
+            grid-area: chart;
+
+            svg {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  select {
+    background-color: rgba(237, 238, 244, 1);
+    padding: 9px 14px;
+    border-radius: 11px;
+    border: none;
+  }
+
+  .xcard {
+    border-radius: 25px;
+    padding: 20px;
+    border: 1px solid rgba(230, 229, 242, 0.81);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    path {
+      fill: rgba(151, 151, 151, 1);
+    }
+
+    &--purple.xcard--active {
+      background-color: rgba(122, 64, 242, 1);
+      color: white;
+
+      path {
+        fill: white;
+      }
+    }
+    &--yellow.xcard--active {
+      background-color: rgba(244, 196, 39, 1);
+      color: white;
+
+      .switch-button__indicator {
+        background-color: rgba(244, 196, 39, 1) !important;
+      }
+
+      path {
+        fill: white;
+      }
+    }
+    &--organge.xcard--active {
+      background-color: rgba(255, 144, 96, 1);
+      color: white;
+
+      .switch-button__indicator {
+        background-color: rgba(255, 144, 96, 1) !important;
+      }
+
+      path {
+        fill: white;
+      }
+    }
+    &--blue.xcard--active {
+      background-color: rgba(58, 203, 233, 1);
+      color: white;
+
+      .switch-button__indicator {
+        background-color: rgba(58, 203, 233, 1) !important;
+      }
+
+      path {
+        fill: white;
+      }
+    }
+  }
+  .switch-button {
+    display: inline-block;
+
+    &__label {
+      float: left;
+      margin-bottom: 0;
+      margin-right: 10px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &__background {
+      float: right;
+      width: 28px;
+      background-color: #d6d6d6;
+      border-radius: 8px;
+      padding: 1px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &__indicator {
+      display: block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: white;
+    }
+
+    input[value="true"] ~ .switch-button__background {
+      background-color: white;
+    }
+    input[value="true"]
+      ~ .switch-button__background
+      > .switch-button__indicator {
+      background-color: rgba(111, 92, 234, 1);
+      margin-left: calc(100% - 15px);
+    }
+  }
+
+  .mr-20 {
+    margin-right: 20px;
+  }
+  .mb-15 {
+    margin-bottom: 15px;
+  }
+  .mb-25 {
+    margin-bottom: 25px;
+  }
+  .mb-37 {
+    margin-bottom: 37px;
+  }
+  .mr-30 {
+    margin-right: 30px;
+  }
+}
